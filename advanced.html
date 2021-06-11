@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Advanced Search</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                margin: 0;
+                font-size: 13px;
+                margin-bottom: 50px;
+            }
+
+            .nav-link {
+                color: black;
+            }
+
+            .nav-link:hover {
+                color: black;
+                text-decoration: underline;
+            }
+
+            .search-bar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer {
+                width: 100%;
+                font-size: 14px;
+                position: fixed;
+                bottom: 0;
+                height: 50px;
+            }
+
+            .row {
+                align-items: center;
+                height: 60px;
+            }
+
+            input[type="submit"] {
+                background-color: rgb(52, 133, 255);
+                border: 1px solid rgb(245, 245, 245);
+                width: auto;
+                color: white;
+                height: 35px;
+            }
+
+            input[type="submit"]:hover {
+                border: 1px solid rgb(200, 200, 200);
+                background-color: rgb(20, 114, 255);
+                box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="file:///home/tomohiko/Desktop/googlesearch.html">Google Search</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-4 mb-5 border-bottom">
+            <a href="file:///home/tomohiko/Desktop/googlesearch.html"><img width=80 src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Go to Google Home Page"></a>
+            <p style="color: #d93025; font-size: large; font-weight: bold;" class="px-4 pt-5">Advanced Search</p>
+        </div>
+        <div class="container-fluid px-4">
+            <form>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p class="px-4" style="font-size: 17px;">Find pages with...</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="px-4"></p>
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="text-secondary fw-bold d-md-none d-lg-block">To do this in the search box.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p class="px-4 my-2">all these words:</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <input class="pl-4 w-100" type="text" name="as_q">
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="px-1 mt-1 mb-1 text-secondary d-md-none d-lg-block">Type the important words: tri-colour rat terrier</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p class="px-4 my-2">this exact word or phrase:</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <input class="pl-4 w-100" type="text" name="as_epq">
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="px-1 mt-1 mb-1 text-secondary d-md-none d-lg-block">Put exact words in quotes: "rat terrier"</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p class="px-4 my-2">any of these words:</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <input class="pl-4 w-100" type="text" name="as_oq">
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="px-1 m-1 text-secondary d-md-none d-lg-block">Type OR between all the words you want: miniature OR standard</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p class="px-4 my-2">none of these words:</p>
+                    </div>
+                    <div class="col-sm-5">
+                        <input class="pl-4 w-100" type="text" name="as_eq">
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="px-1 m-0 pt-1 pb-0 text-secondary d-md-none d-lg-block">Put a minus sign just before words that you don't want:</p>
+                        <p class="px-1 m-0 pt-0 pb-1 text-secondary d-md-none d-lg-block">-rodent, -"Jack Russell"</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p class="px-4 my-2">numbers ranging from:</p>
+                    </div>
+                    <div class="container col-sm-5">
+                        <div class="row" id="numbers">
+                            <div class="col pl-4 w-100"><input style="width: 100%;" type="text" name="as_nlo"></div>
+                            <p class="my-2" style="width: 40px;">to</p>
+                            <div class="col pr-4 w-100"><input style="width: 100%;"type="text" name="as_nhi"></div>
+                        </div>
+                    </div>
+     
+                    <div class="col-sm-5">
+                        <p class="px-1 m-0 pt-1 pb-0 text-secondary d-md-none d-lg-block">Put two full stops between the numbers and add a unit of measurement:</p>
+                        <p class="px-1 m-0 pt-0 pb-1 text-secondary d-md-none d-lg-block">10..35 kg, £300..£500, 2010..2011.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="container col-sm-5">
+                        <div class="row">
+                            <div class="col-sm d-flex justify-content-end">
+                                <input class="pr-4" style="width: 150px;" type="submit" value="Advanced Search" formaction="https://google.com/search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5"></div>
+                </div>
+            </form> 
+        </div>
+        <footer>
+            <nav class="navbar navbar-expand bg-light">
+                <div class="container-fluid">
+                    <div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link text-secondary" href="">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-secondary" href="">Advertising</a></li>
+                            <li class="nav-item"><a class="nav-link text-secondary" href="">Business</a></li>
+                            <li class="nav-item"><a class="nav-link text-secondary" href="">How Search Works</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item d-md-none d-lg-block"><a class="nav-link text-secondary" href="">Privacy</a></li>
+                            <li class="nav-item d-md-none d-lg-block"><a class="nav-link text-secondary" href="">Terms</a></li>
+                            <li class="nav-item d-md-none d-lg-block"><a class="nav-link text-secondary" href="">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>
